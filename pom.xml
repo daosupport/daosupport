@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.dao.support</groupId>
 	<artifactId>daosupport-build</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0-RELEASE</version>
 	<packaging>pom</packaging>
 	<name>daosupport-buildt</name>
 	<description>the java daosupport to simplify the database operation </description>
