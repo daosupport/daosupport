@@ -10,7 +10,7 @@
 	<description>jdbcTemplate Daosupport</description>
 
 	<parent>
-		<groupId>com.dao.support</groupId>
+		<groupId>io.github.daosupport</groupId>
 		<artifactId>daosupport-parent</artifactId>
 		<version>1.0.0-RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
