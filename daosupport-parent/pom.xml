@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dao.support</groupId>
+	<artifactId>daosupport-parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>daosupport-parent</name>
+	<description>the java daosupport to simplify the database operation </description>
+	<organization>
+		<name>husuor</name>
+		<url></url>
+	</organization>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.7.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<alibaba-druid.version>1.0.28</alibaba-druid.version>
+		<jmagick.version>6.6.9</jmagick.version>
+		<imgscalr-lib.version>4.2</imgscalr-lib.version>
+	</properties>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${alibaba-druid.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jmagick</groupId>
+				<artifactId>jmagick</artifactId>
+				<version>${jmagick.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.imgscalr</groupId>
+				<artifactId>imgscalr-lib</artifactId>
+				<version>${imgscalr-lib.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<!-- mavenrepository address -->
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Local Nexus Repository</name>
+			<url></url>
+		</repository>
+		<snapshotRepository>
+			<id>Snapshots</id>
+			<name>Local Nexus Repository</name>
+			<url></url>
+		</snapshotRepository>
+
+	</distributionManagement>
+
+</project>
