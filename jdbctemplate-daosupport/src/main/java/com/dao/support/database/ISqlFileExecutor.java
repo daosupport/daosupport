@@ -10,9 +10,9 @@ public interface ISqlFileExecutor {
 	
 	/**
 	 * 批量执行sql语句
-	 * @param sql 可以以两种形式传递sql:<br>
-	 * <li>1.路径方式：file:com/enation/eop/eop_empty.sql</li>
-	 * <li>2.sql内容：直接传递文件内容</li>
+	 * @param sql 可以以两种形式传递sql:
+	 * 1.路径方式：file:com/enation/eop/eop_empty.sql
+	 * 2.sql内容：直接传递文件内容
 	 */
 	public void execute(String sql); 
 }

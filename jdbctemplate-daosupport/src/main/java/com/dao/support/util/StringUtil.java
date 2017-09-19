@@ -38,8 +38,8 @@ public class StringUtil {
 	/**
 	 * 将一个Double转为int的String，将省略小数点后面的值
 	 * 
-	 * @param d
-	 * @return
+	 * @param d double类型数据
+	 * @return String
 	 */
 	public static String doubleToIntString(Double d) {
 		int value = ((Double) d).intValue();
@@ -49,10 +49,10 @@ public class StringUtil {
 	/**
 	 * 检查浮点数
 	 * 
-	 * @param num
+	 * @param num 待检查数字
 	 * @param type
 	 *            "0+":非负浮点数 "+":正浮点数 "-0":非正浮点数 "-":负浮点数 "":浮点数
-	 * @return
+	 * @return boolean
 	 */
 	public static boolean checkFloat(String num, String type) {
 		String eL = "";
@@ -75,8 +75,8 @@ public class StringUtil {
 	/**
 	 * 检测某字串是否存在某数组中
 	 * 
-	 * @param value
-	 * @param array
+	 * @param value 待检查字符串
+	 * @param array 数组
 	 * @return 存在返回真，不存在返回假
 	 */
 	public static boolean isInArray(String value, String[] array) {
@@ -103,9 +103,9 @@ public class StringUtil {
 	/**
 	 * 将数组成str连接成字符串
 	 * 
-	 * @param str
-	 * @param array
-	 * @return
+	 * @param str 字符串
+	 * @param array 数组
+	 * @return string
 	 */
 	public static String implode(String str, Object[] array) {
 		if (str == null || array == null) {
@@ -179,8 +179,8 @@ public class StringUtil {
 	/**
 	 * 验证Email地址是否有效
 	 * 
-	 * @param sEmail
-	 * @return
+	 * @param sEmail 待检查的email地址
+	 * @return boolean
 	 */
 	public static boolean validEmail(String sEmail) {
 		String pattern = "^([a-z0-9A-Z]+[-|\\.|_]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
@@ -190,8 +190,9 @@ public class StringUtil {
 	/**
 	 * 验证字符最大长度
 	 * 
-	 * @param str
-	 * @return
+	 * @param str 待检查字符串
+	 * @param length 长度
+	 * @return boolean
 	 */
 	public static boolean validMaxLen(String str, int length) {
 		if (str == null || str.equals("")) {
@@ -207,8 +208,9 @@ public class StringUtil {
 	/**
 	 * 验证字符最小长度
 	 * 
-	 * @param str
-	 * @return
+	 * @param str 待检查字符串
+	 * @param length 长度
+	 * @return boolean
 	 */
 	public static boolean validMinLen(String str, int length) {
 		if (str == null || str.equals("")) {
@@ -224,7 +226,7 @@ public class StringUtil {
 	/**
 	 * 验证一个字符串是否为空
 	 * 
-	 * @param str
+	 * @param str 待检查字符串
 	 * @return 如果为空返回真，如果不为空返回假
 	 */
 
@@ -241,8 +243,8 @@ public class StringUtil {
 	
 	/**
 	 * 不为空的判断
-	 * @param str
-	 * @return
+	 * @param str 待检查字符串
+	 * @return boolean
 	 */
 	public static boolean notEmpty(String str) {
 		 return !isEmpty(str);
@@ -253,9 +255,9 @@ public class StringUtil {
 	/**
 	 * 验证两个字符串是否相等且不能为空
 	 * 
-	 * @param str1
-	 * @param str2
-	 * @return
+	 * @param str1  待检查字符串
+	 * @param str2  待检查字符串
+	 * @return boolean
 	 */
 	public static boolean equals(String str1, String str2) {
 		if (str1 == null || str1.equals("") || str2 == null || str2.equals("")) {
@@ -267,9 +269,9 @@ public class StringUtil {
 	/**
 	 * 将字串转为数字
 	 * 
-	 * @param str
-	 * @param checked如果为treu格式不正确抛出异常
-	 * @return
+	 * @param str 待操作字符串
+	 * @param checked 如果为treu格式不正确抛出异常
+	 * @return int
 	 */
 	public static int toInt(String str, boolean checked) {
 		int value = 0;
@@ -293,8 +295,8 @@ public class StringUtil {
 	 * 将object转为数字
 	 * 
 	 * @param obj 需要转object的对象
-	 * @param checked如果为true格式不正确抛出异常
-	 * @return
+	 * @param checked 如果为true格式不正确抛出异常
+	 * @return int
 	 */
 	public static int toInt(Object obj, boolean checked) {
 		int value = 0;
@@ -316,7 +318,7 @@ public class StringUtil {
 	 * 将一个字串转为int，如果无空，则返回默认值
 	 * @param str 要转换的数字字串
 	 * @param defaultValue 默认值 
-	 * @return
+	 * @return Integer
 	 */
 	public static Integer toInt(String str, Integer defaultValue) {
 		Integer value = defaultValue;
@@ -334,8 +336,8 @@ public class StringUtil {
 	/**
 	 * 将字符型转为Int型
 	 * 
-	 * @param str
-	 * @return
+	 * @param str 待操作字符串
+	 * @return 返回的int值
 	 */
 	@Deprecated
 	public static int toInt(String str) {
@@ -352,6 +354,11 @@ public class StringUtil {
 		return value;
 	}
 
+	/**
+	 * 已废弃
+	 * @param str 待操作字符串
+	 * @return 返回值
+	 */
 	@Deprecated
 	public static Double toDouble(String str) {
 		Double value = 0d;
@@ -370,9 +377,9 @@ public class StringUtil {
 	/**
 	 * 将一个字串转为double
 	 * 
-	 * @param str
-	 * @param checked如果为treu格式不正确抛出异常
-	 * @return
+	 * @param str 待操作字符串
+	 * @param checked 如果为treu格式不正确抛出异常
+	 * @return double
 	 */
 	public static Double toDouble(String str, boolean checked) {
 		Double value = 0d;
@@ -395,8 +402,8 @@ public class StringUtil {
 	 * 如果object 为 null 则返回0；
 	 * 
 	 * @param obj 需要转成Double的对象
-	 * @param checked如果为true格式不正确抛出异常
-	 * @return
+	 * @param checked 如果为true格式不正确抛出异常
+	 * @return double
 	 */
 	public static Double toDouble(Object obj, boolean checked) {
 		Double value = 0d;
@@ -417,6 +424,12 @@ public class StringUtil {
 		return value;
 	}
 
+	/**
+	 * 字符串转换为double
+	 * @param str 待转换字符串
+	 * @param defaultValue 默认值
+	 * @return double
+	 */
 	public static Double toDouble(String str, Double defaultValue) {
 		Double value = defaultValue;
 		if (str == null || str.equals("")) {
@@ -435,8 +448,9 @@ public class StringUtil {
 	/**
 	 * 把数组转换成String
 	 * 
-	 * @param array
-	 * @return
+	 * @param array 数组
+	 * @param split 分隔符
+	 * @return string
 	 */
 	public static String arrayToString(Object[] array, String split) {
 		if (array == null) {
@@ -456,9 +470,9 @@ public class StringUtil {
 	/**
 	 * 将一个list转为以split分隔的string
 	 * 
-	 * @param list
-	 * @param split
-	 * @return
+	 * @param list 目标list
+	 * @param split 分割符
+	 * @return string
 	 */
 	public static String listToString(List list, String split) {
 		if (list == null || list.isEmpty())
@@ -476,7 +490,7 @@ public class StringUtil {
 	/**
 	 * 得到WEB-INF的绝对路径
 	 * 
-	 * @return
+	 * @return string
 	 */
 	public static String getWebInfPath() {
 		String filePath = Thread.currentThread().getContextClassLoader()
@@ -500,8 +514,8 @@ public class StringUtil {
 	/**
 	 * 格式化页码
 	 * 
-	 * @param page
-	 * @return
+	 * @param page 页码
+	 * @return int 格式化后的页码
 	 */
 	public static int formatPage(String page) {
 		int iPage = 1;
@@ -519,8 +533,8 @@ public class StringUtil {
 	/**
 	 * 将计量单位字节转换为相应单位
 	 * 
-	 * @param size
-	 * @return
+	 * @param fileSize 计量单位
+	 * @return string 相应单位
 	 */
 	public static String getFileSize(String fileSize) {
 		String temp = "";
@@ -545,7 +559,7 @@ public class StringUtil {
 	/**
 	 * 得到一个32位随机字符
 	 * 
-	 * @return
+	 * @return string
 	 */
 	public static String getEntry() {
 		Random random = new Random(100);
@@ -558,8 +572,8 @@ public class StringUtil {
 	/**
 	 * 将中文汉字转成UTF8编码
 	 * 
-	 * @param str
-	 * @return
+	 * @param str 中文汉字
+	 * @return string 转码后的结果
 	 */
 	public static String toUTF8(String str) {
 		if (str == null || str.equals("")) {
@@ -573,6 +587,12 @@ public class StringUtil {
 		}
 	}
 
+	/**
+	 * 按传入编码转码
+	 * @param str 中文
+	 * @param charset 编码格式
+	 * @return 转码后的数据
+	 */
 	public static String to(String str, String charset) {
 		if (str == null || str.equals("")) {
 			return "";
@@ -585,6 +605,11 @@ public class StringUtil {
 		}
 	}
 
+	/**
+	 * 获得随机字符串
+	 * @param n 字符串长度
+	 * @return 随机字符串
+	 */
 	public static String getRandStr(int n) {
 		Random random = new Random();
 		String sRand = "";
@@ -598,8 +623,8 @@ public class StringUtil {
 	/**
 	 * 得到一个数字的大写(一到十之内)
 	 * 
-	 * @param num
-	 * @return
+	 * @param num 数字
+	 * @return string
 	 */
 	public static String getChineseNum(int num) {
 		String[] chineseNum = new String[] { "一", "二", "三", "四", "五", "六", "七",
@@ -607,12 +632,24 @@ public class StringUtil {
 		return chineseNum[num];
 	}
 
+	/**
+	 * 代替回车
+	 * @param str 字符串
+	 * @return 替代后的数据
+	 */
 	public static String replaceEnter(String str) {
 		if (str == null)
 			return null;
 		return str.replaceAll("\r", "").replaceAll("\n", "");
 	}
 
+	/**
+	 * 替代所有
+	 * @param source 原字符串
+	 * @param target 目标内容
+	 * @param content 替换内容
+	 * @return 替换后的字符串
+	 */
 	public static String replaceAll(String source, String target, String content) {
 		StringBuffer buffer = new StringBuffer(source);
 		int start = buffer.indexOf(target);
@@ -626,8 +663,8 @@ public class StringUtil {
 	/**
 	 * 去除HTML 元素
 	 * 
-	 * @param element
-	 * @return
+	 * @param element html内容
+	 * @return string
 	 */
 	public static String getTxtWithoutHTMLElement(String element) {
 		if (null == element || "".equals(element.trim())) {
@@ -653,8 +690,8 @@ public class StringUtil {
 
 	/**
 	 * clear trim to String
-	 * 
-	 * @return
+	 * @param strtrim 有trim的字符串
+	 * @return string
 	 */
 	public static String toTrim(String strtrim) {
 		if (null != strtrim && !strtrim.equals("")) {
@@ -666,9 +703,9 @@ public class StringUtil {
 	/**
 	 * 转义字串的$
 	 * 
-	 * @param str
-	 * @return
-	 */
+	 * @param str 待转换的字符串
+	 * @return string
+	 */ 
 	public static String filterDollarStr(String str) {
 		String sReturn = "";
 		if (!toTrim(str).equals("")) {
@@ -692,6 +729,11 @@ public class StringUtil {
 		return sReturn;
 	}
 
+	/**
+	 * 压缩html
+	 * @param html 待压缩的html
+	 * @return 压缩后的html
+	 */
 	public static String compressHtml(String html) {
 		if (html == null)
 			return null;
@@ -700,6 +742,11 @@ public class StringUtil {
 		return html;
 	}
 
+	/**
+	 * 把double数据转换为金钱格式
+	 * @param d 待转换的数据
+	 * @return 金钱格式的数据
+	 */
 	public static String toCurrency(Double d) {
 		if (d != null) {
 			DecimalFormat df = new DecimalFormat("￥#,###.00");
@@ -708,13 +755,22 @@ public class StringUtil {
 		return "";
 	}
 
+	/**
+	 * 把int转换成string
+	 * @param i 目标数字
+	 * @return string
+	 */
 	public static String toString(Integer i) {
 		if (i != null) {
 			return String.valueOf(i);
 		}
 		return "";
 	}
-
+	/**
+	 * 把double转换成string
+	 * @param d 目标小数
+	 * @return string
+	 */
 	public static String toString(Double d) {
 		if (null != d) {
 			return String.valueOf(d);
@@ -775,8 +831,8 @@ public class StringUtil {
 	/**
 	 * 处理树型码 获取本级别最大的code 如:301000 返回301999
 	 * 
-	 * @param code
-	 * @return
+	 * @param code 码
+	 * @return int int
 	 */
 	public static int getMaxLevelCode(int code) {
 		String codeStr = "" + code;
@@ -796,6 +852,9 @@ public class StringUtil {
 
 	/**
 	 * 去掉sql的注释
+	 * @param content sql内容
+	 * @return string
+	 * 
 	 */
 	public static String delSqlComment(String content) {
 		String pattern = "/\\*(.|[\r\n])*?\\*/";
@@ -807,6 +866,11 @@ public class StringUtil {
 		return content;
 	}
 
+	/**
+	 * 把输入流转换成string
+	 * @param is 输入流
+	 * @return string
+	 */
 	public static String inputStream2String(InputStream is) {
 		BufferedReader in = new BufferedReader(new InputStreamReader(is));
 		StringBuffer buffer = new StringBuffer();
@@ -821,6 +885,11 @@ public class StringUtil {
 		return buffer.toString();
 	}
 
+	/**
+	 * 解码
+	 * @param keyword  待解码数据
+	 * @return string
+	 */
 	public static String decode(String keyword) {
 		try {
 			keyword = URLDecoder.decode(keyword, "UTF-8");
@@ -835,10 +904,10 @@ public class StringUtil {
 	/**
 	 * 进行解析
 	 * 
-	 * @param regex
-	 * @param rpstr
-	 * @param source
-	 * @return
+	 * @param regex 正则
+	 * @param rpstr 替换数据
+	 * @param source 源数据
+	 * @return string 
 	 */
 	public static String doFilter(String regex, String rpstr, String source) {
 		Pattern p = Pattern.compile(regex, 2 | Pattern.DOTALL);
@@ -849,8 +918,8 @@ public class StringUtil {
 	/**
 	 * 脚本过滤
 	 * 
-	 * @param source
-	 * @return
+	 * @param source 源
+	 * @return string
 	 */
 	public static String formatScript(String source) {
 		source = source.replaceAll("javascript", "&#106avascript");
@@ -870,8 +939,8 @@ public class StringUtil {
 	/**
 	 * 格式化HTML代码
 	 * 
-	 * @param htmlContent
-	 * @return
+	 * @param htmlContent html数据
+	 * @return string
 	 */
 	public static String htmlDecode(String htmlContent) {
 		htmlContent = formatScript(htmlContent);
@@ -885,9 +954,9 @@ public class StringUtil {
 	/**
 	 * 动态添加表前缀，对没有前缀的表增加前缀
 	 * 
-	 * @param table
-	 * @param prefix
-	 * @return
+	 * @param table 表名
+	 * @param prefix 前缀
+	 * @return string 
 	 */
 	public static String addPrefix(String table, String prefix) {
 		String result = "";
@@ -903,6 +972,12 @@ public class StringUtil {
 		return result;
 	}
 
+	/**
+	 * 加后缀
+	 * @param table 表名
+	 * @param suffix 后缀
+	 * @return string
+	 */
 	public static String addSuffix(String table, String suffix) {
 		String result = "";
 		if (table.length() > suffix.length()) {
@@ -922,8 +997,8 @@ public class StringUtil {
 
 	/**
 	 * 得到异常的字串
-	 * @param aThrowable
-	 * @return
+	 * @param aThrowable 爆出的异常
+	 * @return string
 	 */
 	public static String getStackTrace(Throwable aThrowable) { 
 		final Writer result = new StringWriter(); 
@@ -936,7 +1011,7 @@ public class StringUtil {
 	 * 判断Integer是否为空
 	 * @param i 需要校验的Integer对象
 	 * @param includeZero 是否包含0
-	 * @return
+	 * @return boolean
 	 */
 	public static boolean isEmpty(Integer i,boolean includeZero){
 		if(includeZero){
@@ -953,7 +1028,7 @@ public class StringUtil {
 	/**
 	 * 判断是否是数字，传入字符串，判断是否是数字，true  是     false  否
 	 * @param str  字符串
-	 * @return
+	 * @return boolean
 	 */
 	public static boolean isNumber(String str) { 
 		Pattern patternInteger = Pattern.compile("^[-\\+]?[\\d]*$");		//是否是整数

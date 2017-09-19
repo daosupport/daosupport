@@ -17,7 +17,7 @@ public class DateUtil {
 	public static final long ONE_DAY=86400;//一天的秒数
 	 /**
 	   * 当天的开始时间
-	   * @return
+	   * @return 时间戳
 	   */
 	  public static long startOfTodDay() {
 	    Calendar calendar = Calendar.getInstance();
@@ -30,7 +30,7 @@ public class DateUtil {
 	  }
 	  /**
 	   * 当天的结束时间
-	   * @return
+	   * @return 时间戳
 	   */
 	  public static long endOfTodDay() {
 	    Calendar calendar = Calendar.getInstance();
@@ -43,7 +43,7 @@ public class DateUtil {
 	  }
 	  /**
 	   * 昨天的开始时间
-	   * @return
+	   * @return 时间戳
 	   */
 	  public static long startOfyesterday() {
 	    Calendar calendar = Calendar.getInstance();
@@ -57,7 +57,7 @@ public class DateUtil {
 	  }
 	  /**
 	   * 昨天的结束时间
-	   * @return
+	   * @return 时间戳
 	   */
 	  public static long endOfyesterday() {
 	    Calendar calendar = Calendar.getInstance();
@@ -72,7 +72,7 @@ public class DateUtil {
 	  /**
 	   * 某天的开始时间
 	   * @param dayUntilNow 距今多少天以前
-	   * @return 时间戳
+	   * @return 时间戳 
 	   */
 	  public static long startOfSomeDay(int dayUntilNow){
 		  Calendar calendar = Calendar.getInstance();
@@ -105,9 +105,9 @@ public class DateUtil {
 	 }
 	/**
 	 * 将一个字符串转换成日期格式
-	 * @param date
-	 * @param pattern
-	 * @return
+	 * @param date 日期字符串
+	 * @param pattern 正则格式
+	 * @return Date类型数据
 	 */
 	public static Date toDate(String date, String pattern) {
 		if((""+date).equals("")){
@@ -129,9 +129,9 @@ public class DateUtil {
 	
 	/**
 	 * 把日期转换成字符串型
-	 * @param date
-	 * @param pattern
-	 * @return
+	 * @param date 日期
+	 * @param pattern 正则字符串
+	 * @return 日期字符串
 	 */
 	public static String toString(Date date, String pattern){
 		if(date == null){
@@ -166,7 +166,7 @@ public class DateUtil {
 	
 	/**
 	 * 获取上个月的开始结束时间
-	 * @return
+	 * @return long数组  开始时间和结束时间
 	 */
 	public static Long[] getLastMonth() {
 		   // 取得系统当前时间
@@ -216,7 +216,7 @@ public class DateUtil {
 	
 	/**
 	 * 获取当月的开始结束时间
-	 * @return
+	 * @return 当月开始时间和结束时间的long数组
 	 */
 	public static Long[] getCurrentMonth() {
 		   // 取得系统当前时间

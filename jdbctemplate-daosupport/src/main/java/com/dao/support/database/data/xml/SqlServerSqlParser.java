@@ -238,7 +238,7 @@ public class SqlServerSqlParser implements ISqlParser,INonVariableInsert {
 	/**
 	 * 判断是否是没有主键的表
 	 * @param table
-	 * @return
+	 * @return boolean
 	 */
 	private boolean isHavntPrimarykey(String table){
 		if(!table.equals("es_type_brand") && !table.equals("es_tag_rel") && !table.equals("es_tag_relb")  && !table.equals("es_depot_user") &&  !table.equals("es_settings") ){	//判断某些表没有主键

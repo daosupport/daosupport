@@ -14,7 +14,7 @@ public class SqlParserFactory {
 	private static ISqlParser sqlParser;
 	/**
 	 * 根据数据库类型获取合适的sql解析器
-	 * @return
+	 * @return ISqlParser
 	 */
 	public static ISqlParser getSqlParser(){
 		

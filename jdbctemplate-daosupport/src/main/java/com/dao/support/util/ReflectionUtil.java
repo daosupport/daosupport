@@ -98,8 +98,8 @@ public class ReflectionUtil {
 	/**
 	 * 将po对象中有属性和值转换成map
 	 * 
-	 * @param po
-	 * @return
+	 * @param po 对象
+	 * @return map 集合
 	 */
 	public static Map po2Map(Object po) {
 		Map poMap = new HashMap();
@@ -159,8 +159,8 @@ public class ReflectionUtil {
 	/**
 	 * 将po对象中有属性和值转换成map
 	 * 
-	 * @param po
-	 * @return
+	 * @param po 对象
+	 * @return map 集合
 	 */
 	public static Map po2MapIgnoreAnn(Object po) {
 		Map poMap = new HashMap();
