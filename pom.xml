@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.daosupport</groupId>
 	<artifactId>daosupport-build</artifactId>
-	<version>1.0.0-RELEASE</version>
+	<version>1.0.1-RELEASE</version>
 	<packaging>pom</packaging>
 	<name>daosupport-build</name>
 	<url>https://github.com/daosupport</url>
