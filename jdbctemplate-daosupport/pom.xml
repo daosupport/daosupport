@@ -13,8 +13,8 @@
 		<groupId>io.github.daosupport</groupId>
 		<artifactId>daosupport-parent</artifactId>
 		<version>1.0.0-RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-		 
+		<relativePath /> <!-- lookup parent from repository -->
+
 	</parent>
 
 	<properties>
@@ -32,6 +32,14 @@
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<scope>provided</scope>
+			<version>1.2</version>
+		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
