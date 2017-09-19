@@ -5,7 +5,8 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.log4j.Logger;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -36,7 +37,8 @@ public class JdbcDaoSupport implements IDaoSupport {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
-	protected final Logger logger = Logger.getLogger(getClass());
+	private static final Log logger = LogFactory
+			.getLog(JdbcDaoSupport.class);
 	
 	public final static Integer DEFAULT_PAGENO=1;
 	public final static Integer DEFAULT_PAGESIZE=20;

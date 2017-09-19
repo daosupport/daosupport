@@ -19,8 +19,8 @@ public class SqlPaser {
 	
 	/**
 	 * 从一个sql语句中找到order by 子句
-	 * @param sql
-	 * @return
+	 * @param sql 数据库语句
+	 * @return string 子句
 	 */
 	public static String findOrderStr(String sql ){
 

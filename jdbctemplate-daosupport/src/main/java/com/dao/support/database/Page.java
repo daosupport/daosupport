@@ -25,15 +25,14 @@ public class Page<T>  implements Serializable {
 	
 	private long  currentPageNo=1;
 	 
-	
-	/**
-	 * 构造方法，只构造空页.
-	 */
 	public Page() {
 		this(0, 0, DEFAULT_PAGE_SIZE, new ArrayList<T>());
 	}
 
-	
+	/**
+	 * 
+	 * @return int
+	 */
 	public int getRecordsFiltered(){
 		
 		return Integer.valueOf(""+ this.totalCount);
@@ -64,6 +63,7 @@ public class Page<T>  implements Serializable {
 
 	/**
 	 * 取总记录数.
+	 * @return long
 	 */
 	public long getTotalCount() {
 		return this.totalCount;
@@ -71,6 +71,7 @@ public class Page<T>  implements Serializable {
 
 	/**
 	 * 取总页数.
+	 * @return long
 	 */
 	public long getTotalPageCount() {
 		if (totalCount % pageSize == 0)
@@ -81,6 +82,7 @@ public class Page<T>  implements Serializable {
 
 	/**
 	 * 取每页数据容量.
+	 * @return int
 	 */
 	public int getPageSize() {
 		return pageSize;
@@ -88,6 +90,7 @@ public class Page<T>  implements Serializable {
 
 	/**
 	 * 取当前页中的记录.
+	 *  @return 分页记录
 	 */
 	@JsonProperty("data")  
 	public List<T> getResult() {
@@ -96,6 +99,7 @@ public class Page<T>  implements Serializable {
 
 	/**
 	 * 取该页当前页码,页码从1开始.
+	 * @return long
 	 */
 	public long getCurrentPageNo() {
 		return this.currentPageNo;
@@ -103,6 +107,7 @@ public class Page<T>  implements Serializable {
 
 	/**
 	 * 该页是否有下一页.
+	 * @return boolean
 	 */
 	public boolean hasNextPage() {
 		return this.getCurrentPageNo() < this.getTotalPageCount() - 1;
@@ -110,6 +115,7 @@ public class Page<T>  implements Serializable {
 
 	/**
 	 * 该页是否有上一页.
+	 *  @return boolean
 	 */
 	public boolean hasPreviousPage() {
 		return this.getCurrentPageNo() > 1;

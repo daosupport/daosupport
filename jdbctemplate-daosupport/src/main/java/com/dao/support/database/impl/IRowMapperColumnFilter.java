@@ -15,8 +15,9 @@ public interface IRowMapperColumnFilter {
 	
 	/**
 	 * 对结果集的行进行过滤
-	 * @param ColValues 结果集一行的map
+	 * @param colValues 结果集一行的map
 	 * @param rs 结果集
+	 * @throws SQLException 数据库异常
 	 */
 	public void filter(Map colValues,ResultSet rs) throws SQLException;
 	

@@ -22,8 +22,9 @@ public interface ISqlParser {
 	/**
 	 * 解析创建表的sql
 	 * @param tableName 表名
-	 * @param fields 字段Map，key为fieldName，value为field value 
+	 * @param fieldList 字段Map，key为fieldName，value为field value 
 	 * @see Field
+	 * @return string数组
 	 */
 	String[] parseCreateSql(String tableName,List<Field> fieldList);
 	
@@ -33,6 +34,7 @@ public interface ISqlParser {
 	 * @param tableName 表名
 	 * @param fieldList 字段列表
 	 * @see Field
+	 * @return string数组
 	 */
 	String[] parseAlterSql(String tableName,  List<Field> fieldList);
  
@@ -40,7 +42,7 @@ public interface ISqlParser {
 	/**
 	 * 解析删除表的sql
 	 * @param tableName 表名
-	 * @param fields 字段Map，key为fieldName，value为field value 
+	 * @return string数组
 	 */
 	String[] parseDropSql(String tableName);
  
