@@ -14,6 +14,16 @@ Add maven dependency
 	<version>1.0.1-RELEASE</version>
 </dependency>
 ```
+Add configuration
+```java
+	@Configuration
+	@ComponentScan("com.dao.support")
+	public class DemoConfig {
+
+	}
+	
+```
+
 ```java
 	@Autowired
 	private IDaoSupport daoSupport;
