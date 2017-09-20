@@ -23,3 +23,8 @@ Add maven dependency
 	}
 ```
 Look, it's works!
+
+Thanks  for my last company ,they agree that I'm open source code.
+Thanks  for the boss of my last company,he contributed most of the code.
+If you want to buy the source code of  e-commerce,please contact him.
+their website is http://www.javamall.com.cn .
