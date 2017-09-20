@@ -27,7 +27,7 @@ Add configuration
 ```java
 	@Autowired
 	private IDaoSupport daoSupport;
-    public List<Map<String,Object>> getTestList(){
+	public List<Map<String,Object>> getTestList(){
 		String sql="select * from t_example";
 		return this.daoSupport.queryForList(sql);
 	}
